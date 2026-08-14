@@ -1,0 +1,654 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif, Arial, sans-serif;
+}
+
+body {
+    background-color: #fceecb; /* Fondo beige suave */
+    color: #000;
+}
+
+/* 1. Elimina todos los márgenes del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff9e6; /* Color de fondo beige */
+    overflow-x: hidden; /* Evita desplazamientos horizontales no deseados */
+}
+
+/* 2. Expande el contenedor principal a pantalla completa */
+.page-container {
+    width: 100% !important;
+    max-width: 100% !important; /* Elimina el límite de ancho */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 3. Encabezado y Navegación extendidos */
+header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Barra con los colores de la bandera de Italia */
+.flag-bar {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    margin: 15px 0;
+}
+
+.flag-green { background-color: #008c45; flex: 1; }
+.flag-white { background-color: #f4f5f0; flex: 1; }
+.flag-red   { background-color: #cd212a; flex: 1; }
+
+/* 4. Sección Hero (Imagen central) */
+.hero-section {
+    width: 100%;
+    flex: 1; /* Ocupa todo el espacio disponible verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.hero-img {
+    width: 100%; /* Ocupa todo el ancho */
+    max-height: 550px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+}
+
+/* 5. Pie de página a pantalla completa */
+.main-footer {
+    width: 100%;
+    background-color: #FF4500; /* Fondo naranja */
+    color: #000;
+    padding: 20px 5%;
+    margin-top: auto; /* Se adhiere a la parte inferior */
+}
+
+/* Contenedor Principal */
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fceecb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding-top: 15px;
+    background-color: #fceecb;
+    position: relative;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: sans-serif;
+}
+
+/* Barra Tricolor Italiana */
+.flag-bar {
+    display: flex;
+    height: 16px;
+    width: 100%;
+}
+.flag-green { background-color: #1b7339; flex: 1; }
+.flag-white { background-color: #ffffff; flex: 1; }
+.flag-red { background-color: #b81d24; flex: 1; }
+
+/* Navegación Principal (Botones Verdes Ovalados) */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+}
+
+.nav-btn {
+    background-color: #1c5e2a;
+    color: #ffffff;
+    border: 2px solid #0f3d19;
+    padding: 6px 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: background-color 0.2s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background-color: #13421d;
+}
+
+/* Botón "Atrás" (Azul superior derecho) */
+.btn-atras-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px 0 20px;
+}
+
+.btn-atras {
+    background-color: #173375;
+    color: #ffffff;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #0d1f4a;
+}
+
+/* Títulos de Sección */
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.section-padding {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Sección de Inicio (Hero) */
+.hero-section {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 1px solid #d4c296;
+}
+
+.menu-btn-container {
+    margin: 20px 0 30px 0;
+}
+
+.cta-menu-btn {
+    background-color: #fceecb;
+    border: 1px solid #b8a679;
+    padding: 12px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Cajas de Historia */
+.story-box {
+    background-color: #fde8b3;
+    border: 1px solid #d6c18c;
+    padding: 18px;
+    margin: 0 auto 20px auto;
+    max-width: 700px;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.chef-img {
+    display: block;
+    margin: 20px auto;
+    width: 260px;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Cuadrícula de Menú / Especialidades */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 15px;
+    padding: 10px 10px 40px 10px;
+}
+
+.menu-card {
+    text-align: center;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    margin-bottom: 6px;
+}
+
+.menu-card h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+.menu-card-description {
+    background-color: #fde8b3;
+    border: 1px solid #d6c18c;
+    padding: 10px;
+    font-size: 13px;
+    text-align: left;
+    min-height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 13px;
+    text-align: right;
+    display: block;
+    margin-top: 8px;
+}
+
+/* =========================================
+   ANIMACIÓN PARA LAS TARJETAS DEL MENÚ
+   ========================================= */
+
+/* Definición de la animación de entrada */
+@keyframes aparecerDesdeArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Comienza 30px más arriba y transparente */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* Aplicar la animación a las tarjetas */
+.grid-menu .menu-card {
+    opacity: 0; /* Mantiene ocultas las tarjetas antes de animarse */
+    animation: aparecerDesdeArriba 0.8s ease-out forwards;
+}
+
+/* Retardo progresivo para que aparezcan una por una */
+.grid-menu .menu-card:nth-child(1) { animation-delay: 0.1s; }
+.grid-menu .menu-card:nth-child(2) { animation-delay: 0.3s; }
+.grid-menu .menu-card:nth-child(3) { animation-delay: 0.5s; }
+.grid-menu .menu-card:nth-child(4) { animation-delay: 0.7s; }
+.grid-menu .menu-card:nth-child(5) { animation-delay: 0.9s; }
+.grid-menu .menu-card:nth-child(6) { animation-delay: 1.1s; }
+.grid-menu .menu-card:nth-child(7) { animation-delay: 1.3s; }
+.grid-menu .menu-card:nth-child(8) { animation-delay: 1.5s; }
+
+/* =========================================
+   SECCIÓN RESEÑAS (CUADROS ROJOS CON BORDES REDONDEADOS)
+   ========================================= */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px 20px 40px 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background-color: #cb2229; /* Rojo vibrante exacto */
+    padding: 25px 15px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 12px; /* Bordes redondeados exactos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-avatar {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #ffffff;
+}
+
+.review-stars {
+    color: #ffeb3b;
+    font-size: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.review-text {
+    font-size: 15px;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.2;
+}
+.review-stars {
+    color: #ffeb3b; /* Estrellas amarillas */
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-size: 16px;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+/* Formulario de Reservas */
+.reservation-box {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: #fde8b3;
+    border: 1px solid #d6c18c;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+/* Sección Ubicación */
+.location-section {
+    text-align: center;
+    padding: 10px 20px 30px 20px;
+}
+
+.location-img, .map-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 15px auto;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+/* Pie de Página (Footer Negro) */
+footer {
+    background-color: #FF4500;
+    color: #ffffff;
+    padding: 25px 20px;
+    font-family: sans-serif;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-schedule p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 13px;
+}
+
+.social-icons {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.social-icons div {
+    margin-top: 5px;
+}
+
+/* =========================================
+   EFECTOS Y ANIMACIONES PARA TODO EL SITIO
+   ========================================= */
+
+/* 1. Animación suave para la página de INICIO (Hero & Botón) */
+@keyframes entradaHero {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-img {
+    animation: entradaHero 0.8s ease-out forwards;
+}
+
+.cta-menu-btn {
+    animation: entradaHero 1s ease-out forwards;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-menu-btn:hover {
+    transform: scale(1.05);
+}
+
+/* 2. Animación en cascada para los platos del MENÚ */
+@keyframes caerDesdeArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid-menu .menu-card {
+    opacity: 0;
+    animation: caerDesdeArriba 0.6s ease-out forwards;
+}
+
+/* Tiempos de espera para que aparezcan uno tras otro */
+.grid-menu .menu-card:nth-child(1) { animation-delay: 0.1s; }
+.grid-menu .menu-card:nth-child(2) { animation-delay: 0.25s; }
+.grid-menu .menu-card:nth-child(3) { animation-delay: 0.4s; }
+.grid-menu .menu-card:nth-child(4) { animation-delay: 0.55s; }
+.grid-menu .menu-card:nth-child(5) { animation-delay: 0.7s; }
+.grid-menu .menu-card:nth-child(6) { animation-delay: 0.85s; }
+
+/* 3. Animación para las tarjetas de RESEÑAS / INFORMACIÓN */
+@keyframes deslizarIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.resenas-container .card-resena, 
+.info-section .info-card {
+    opacity: 0;
+    animation: deslizarIzquierda 0.7s ease-out forwards;
+}
+
+.resenas-container .card-resena:nth-child(1) { animation-delay: 0.2s; }
+.resenas-container .card-resena:nth-child(2) { animation-delay: 0.4s; }
+.resenas-container .card-resena:nth-child(3) { animation-delay: 0.6s; }
+
+/* 4. Animación para FORMULARIOS (Reservas y Contacto/Localización) */
+@keyframes subirFormulario {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container, 
+.mapa-container {
+    animation: subirFormulario 0.8s ease-out forwards;
+}
+
+/* 5. Transición suave en botones de la barra de navegación */
+.nav-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   ANIMACIONES PARA RESERVAS, INFORMACIÓN Y LOCALIZACIÓN
+   ========================================================= */
+
+/* Animación general de subida suave */
+@keyframes subirSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de expansión para imágenes y mapas */
+@keyframes expandirEfecto {
+    0% {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------------------------------------------------------
+   1. PÁGINA DE RESERVAS (reservas.html)
+   --------------------------------------------------------- */
+/* El formulario de reservas sube desde abajo */
+#reservas .form-container,
+.reservas-section form,
+.booking-form {
+    opacity: 0;
+    animation: subirSuave 0.8s ease-out forwards;
+}
+
+/* Los campos e insumos del formulario van apareciendo en orden */
+.form-group, 
+form input, 
+form select, 
+form button {
+    opacity: 0;
+    animation: subirSuave 0.5s ease-out forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.2s; }
+.form-group:nth-child(2) { animation-delay: 0.35s; }
+.form-group:nth-child(3) { animation-delay: 0.5s; }
+.form-group:nth-child(4) { animation-delay: 0.65s; }
+form button { animation-delay: 0.8s; }
+
+
+/* ---------------------------------------------------------
+   2. PÁGINA DE INFORMACIÓN / NOSOTROS (nosotros.html)
+   --------------------------------------------------------- */
+/* El texto o historia principal del restaurante */
+.info-section, 
+.about-container, 
+.nosotros-content {
+    opacity: 0;
+    animation: subirSuave 0.7s ease-out forwards;
+}
+
+/* Galería o imágenes de la información */
+.info-img, 
+.nosotros-img, 
+.galeria-item {
+    opacity: 0;
+    animation: expandirEfecto 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+
+/* ---------------------------------------------------------
+   3. PÁGINA DE LOCALIZACIÓN / CONTACTO (contacto.html)
+   --------------------------------------------------------- */
+/* El contenedor del mapa aparece con zoom suave */
+.mapa-container, 
+.map-frame, 
+#mapa {
+    opacity: 0;
+    animation: expandirEfecto 0.9s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Los datos de contacto (dirección, teléfono) suben */
+.contacto-info, 
+.location-details {
+    opacity: 0;
+    animation: subirSuave 0.7s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Adaptación Celular */
+@media (max-width: 768px) {
+    .grid-menu, .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-right {
+        text-align: left;
+    }
+}
